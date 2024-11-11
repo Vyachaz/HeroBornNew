@@ -332,6 +332,7 @@
 "Assets/Scripts/CameraBehavior.cs"
 "Assets/Scripts/Character.cs"
 "Assets/Scripts/EnemyBehavior.cs"
+"Assets/Scripts/GameBehavior.cs"
 "Assets/Scripts/ItemBehavior.cs"
 "Assets/Scripts/LearningCurve.cs"
 "Assets/Scripts/Paladin.cs"
