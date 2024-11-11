@@ -8,12 +8,15 @@ public class PlayerBehavior : MonoBehaviour
     public float moveSpeed = 10f;
     public float rotateSpeed = 75f;
     public float jumpVelocity = 5f;
+    public float distanceToGround = 1f;
+    public float bulletSpeed = 100f;
+
 
     private float vInput;
     private float hInput;
-    public float distanceToGround = 0.8f;
-
     private Rigidbody _rb;
+
+    public GameObject bullet;
     public LayerMask groundLayer;
 
     private CapsuleCollider _col;
@@ -53,6 +56,17 @@ public class PlayerBehavior : MonoBehaviour
         _rb.MovePosition(this.transform.position + this.transform.forward * vInput * Time.fixedDeltaTime);
 
         _rb.MoveRotation(_rb.rotation * angelRot);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject newBullet = Instantiate(
+                bullet,
+                this.transform.position + new Vector3(1, 0, 0),
+                this.transform.rotation
+                ) as GameObject;
+            Rigidbody bulletR8 = newBullet.GetComponent<Rigidbody>();
+            bulletR8.velocity = this.transform.forward * bulletSpeed;
+        }
     }
     private bool IsGrounded()
     {
@@ -60,16 +74,16 @@ public class PlayerBehavior : MonoBehaviour
         bool grounded = Physics.CheckCapsule(_col.bounds.center, 
             capsuleBottom, 
             distanceToGround,
-           // groundLayer,
-           // QueryTriggerInteraction.Ignore);
+            groundLayer,
+            QueryTriggerInteraction.Ignore);
         //Debug.Log($"текущее расстояние от пола до центра {capsuleBottom.y}");
-        Debug.Log($"расстояние START: {capsuleBottom}" +
-            $" - расстояние END: {_col.bounds.center}" +
-            $" - RADIUS - {distanceToGround}" +
-          //  $" - LAYERMASK - {groundLayer}" +
-           // $" - queryTriggerInteraction - {QueryTriggerInteraction.Ignore}" +
-            $" в ИТОГЕ -- {grounded}");
-       // Debug.Log($"grounded -- {grounded}");
+     //  Debug.Log($"расстояние START: {capsuleBottom}" +
+     //      $" - расстояние END: {_col.bounds.center}" +
+     //      $" - RADIUS - {distanceToGround}" +
+     //      $" - LAYERMASK - {groundLayer}" +
+     //      $" - queryTriggerInteraction - {QueryTriggerInteraction.Ignore}" +
+     //      $" в ИТОГЕ -- {grounded}");
+     // // Debug.Log($"grounded -- {grounded}");
         return grounded;
 
     }

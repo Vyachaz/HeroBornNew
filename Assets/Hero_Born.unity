@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1382,7 +1382,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -15, y: 0.5, z: 0}
-  m_LocalScale: {x: 30, y: 1, z: 0.10000001}
+  m_LocalScale: {x: 30, y: 1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1964600254}
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7501c5e9cf18ecb45be95f7fa24637b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camOffset: {x: 0, y: 1.2, z: -2.6}
+  camOffset: {x: 0, y: 1.3, z: -2.6}
 --- !u!1 &1964600253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,7 +1697,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3745189256731870539, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
       propertyPath: m_Radius
-      value: 0.1
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3745189256731870539, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3881881865772088571, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1743,13 +1747,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4028416796638158438, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516435703817987243, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 43182516762535378, guid: 437c95decfabba84593e81f67d374570, type: 3}
+    - target: {fileID: 6516435703817987243, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6516435703817987243, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
       propertyPath: jumpVelocity
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6516435703817987243, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
       propertyPath: distanceToGround
-      value: 0.8
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516435703817987243, guid: 47d8aa53a97e216468235065bbf860f6, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
