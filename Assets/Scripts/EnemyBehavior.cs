@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public Transform player;
     public Transform patrolRoute;
     public List<Transform> locations;
 
@@ -16,9 +17,9 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         locationIndex = (int) Random.Range(0f, 4f);
-        Debug.Log($"RANDOM ==   {locationIndex} ");
 
-    agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        player = GameObject.Find("Player").transform;
         InitializePatrolRoute();
         MoveToNextPatrolLocation();
     }
@@ -27,9 +28,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (agent.remainingDistance < 0.6f && !agent.pathPending) 
         {
-            Debug.Log($"agent.destination == {locations[locationIndex].position} ");
             MoveToNextPatrolLocation();
-          //  Debug.Log("Сработал UPDATE!!!");
         }
     }
 
@@ -43,23 +42,19 @@ public class EnemyBehavior : MonoBehaviour
 
     void MoveToNextPatrolLocation()
     {
-       // Debug.Log($"locationIndex ==   {locationIndex} ");
-       // Debug.Log($"locations.Count == {locations.Count} ");
         if (locations.Count == 0) 
         {
-           // Debug.Log($"locations.Count  {locations.Count} ");
             return; 
         }
         agent.destination = locations[locationIndex].position;
-        //Debug.Log($"agent.destination == {agent.destination} ");
         locationIndex = (locationIndex + 1) % locations.Count;
-       // Debug.Log($"locationIndex ==   {locationIndex} ");
     }
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
     {
         if(other.name == "Player")
         {
+            agent.destination = player.position;
             Debug.Log("Player detected - - attack!!!");
         }
     }

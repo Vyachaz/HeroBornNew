@@ -20,12 +20,15 @@ public class PlayerBehavior : MonoBehaviour
     public LayerMask groundLayer;
 
     private CapsuleCollider _col;
+    private GameBehavior _gameManager;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
 
         _col = GetComponent<CapsuleCollider> ();
+
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>();
 
     }
     
@@ -86,5 +89,12 @@ public class PlayerBehavior : MonoBehaviour
      // // Debug.Log($"grounded -- {grounded}");
         return grounded;
 
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Enemy")
+        {
+            _gameManager.HP -= 1;
+        }
     }
 }
