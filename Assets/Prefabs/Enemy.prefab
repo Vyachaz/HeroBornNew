@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6013105026948502990}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.0031285, y: 0.7, z: -6.3999496}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9f9734f0420004bb399d62d188d428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolRoute: {fileID: 0}
+  locations: []
 --- !u!195 &-6739223816831258246
 NavMeshAgent:
   m_ObjectHideFlags: 0
