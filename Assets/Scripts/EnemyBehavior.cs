@@ -10,10 +10,22 @@ public class EnemyBehavior : MonoBehaviour
     public List<Transform> locations;
 
     private int locationIndex = 0;
-    
-
     private UnityEngine.AI.NavMeshAgent agent;
 
+    private int _lives = 3;
+    public int Enemylives
+    {
+        get { return _lives; }
+        private set
+        {
+            _lives = value;
+            if(_lives <= 0)
+            {
+                Destroy(this.gameObject);
+                Debug.Log("Enemy down");
+            }
+        }
+    }
     void Start()
     {
         locationIndex = (int) Random.Range(0f, 4f);
@@ -63,6 +75,24 @@ public class EnemyBehavior : MonoBehaviour
         if(other.name == "Player")
         {
             Debug.Log("Player out of ranfe, resume patrol.");
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Bullet(clone)")
+        {
+            Enemylives -= 1;
+            Debug.Log("Critical hit (ÊËÎÍ)!");
+        }
+        if (collision.gameObject.name == "Bullet")
+        {
+            Enemylives -= 1;
+            Debug.Log("Critical hit!");
+        }
+        if (collision.gameObject.name == "Bullet(Clone)")
+        {
+            Enemylives -= 1;
+            Debug.Log("Critical hit (Ñlone)!");
         }
     }
 

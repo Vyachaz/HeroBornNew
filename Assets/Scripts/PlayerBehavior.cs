@@ -10,6 +10,7 @@ public class PlayerBehavior : MonoBehaviour
     public float jumpVelocity = 5f;
     public float distanceToGround = 1f;
     public float bulletSpeed = 100f;
+    public Vector3 bulletPosition;
 
 
     private float vInput;
