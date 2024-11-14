@@ -10,7 +10,6 @@ public class PlayerBehavior : MonoBehaviour
     public float jumpVelocity = 5f;
     public float distanceToGround = 1f;
     public float bulletSpeed = 100f;
-    public Vector3 bulletPosition;
 
 
     private float vInput;
@@ -65,7 +64,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             GameObject newBullet = Instantiate(
                 bullet,
-                this.transform.position + new Vector3(1, 0, 0),
+                 this.transform.position + new Vector3(1, 0, 0),
                 this.transform.rotation
                 ) as GameObject;
             Rigidbody bulletR8 = newBullet.GetComponent<Rigidbody>();
