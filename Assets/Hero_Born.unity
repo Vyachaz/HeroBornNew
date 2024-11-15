@@ -3040,7 +3040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6739223816831258246, guid: 3899846aa0ea55d4eace9ac658cc8039, type: 3}
       propertyPath: m_Speed
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3984302784507359449, guid: 3899846aa0ea55d4eace9ac658cc8039, type: 3}
       propertyPath: patrolRoute
