@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CustomExtensions;
+using System.Collections.Generic;
 
 public class GameBehavior : MonoBehaviour, IManager
 {
@@ -9,6 +11,8 @@ public class GameBehavior : MonoBehaviour, IManager
     public int maxItems = 4;
     public bool showWinScreen = false;
     public bool showLossScreen = false;
+
+    public Stack<string> lootStack = new Stack<string>();
 
     private int _itemsCollected = 0;
     private string _state;
@@ -119,6 +123,36 @@ public class GameBehavior : MonoBehaviour, IManager
     public void Initialize()
     {
         _state = "Manager initialaized...";
+        _state.FancyDebug();
         Debug.Log(_state);
+
+        lootStack.Push("Sword of Doom");
+        lootStack.Push("HP++");
+        lootStack.Push("Golden Key");
+        lootStack.Push("Winget Boot");
+        lootStack.Push("Mithril Bracers");
+
+    }
+    public void PrintLootReport()
+    {
+        var currentItem = lootStack.Pop();
+        var nextItem = lootStack.Peek();
+
+
+        Debug.LogFormat("You goy a {0}!!! You've got a good chance of findidng a {1} next!!!", currentItem, nextItem);
+        Debug.LogFormat("There are {0} random loot items waiting for you!!", lootStack.Count);
+    }
+    public void PrintLootReport(bool val)
+    {
+        if (!val)
+        {
+            string strStack = lootStack.ToString();
+            Debug.Log($"Stack = {strStack}");
+        }
+        else
+        {
+            Debug.Log($" Last element of Stack = {lootStack.Peek()}");
+
+        }
     }
 }
