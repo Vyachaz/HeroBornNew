@@ -1,118 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|c:\\users\\vyachaz\\documents\\unity learning\\probe\\herobornnew\\assets\\scripts\\basemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\basemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|c:\\users\\vyachaz\\documents\\unity learning\\probe\\herobornnew\\assets\\scripts\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\assets\\scripts\\gamebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamebehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\assets\\scripts\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\assets\\scripts\\playerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\assets\\scripts\\enemybehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F5800E4-524B-E813-87B9-EB7395DB2BCE}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemybehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseManager.cs",
-              "DocumentMoniker": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\BaseManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BaseManager.cs",
-              "ToolTip": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\BaseManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BaseManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T06:20:40.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IManager.cs",
-              "DocumentMoniker": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\IManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\IManager.cs",
-              "ToolTip": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\IManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\IManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T06:12:36.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Utilities.cs",
-              "DocumentMoniker": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\Utilities.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities.cs",
-              "ToolTip": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\Utilities.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T06:06:39.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\PlayerBehavior.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerBehavior.cs",
-              "ToolTip": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\PlayerBehavior.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerBehavior.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T17:21:26.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EnemyBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\EnemyBehavior.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyBehavior.cs",
-              "ToolTip": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\EnemyBehavior.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnemyBehavior.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwDgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T13:53:30.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\GameBehavior.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameBehavior.cs",
-              "ToolTip": "C:\\Users\\Vyachaz\\Documents\\Unity Learning\\Probe\\HeroBornNew\\Assets\\Scripts\\GameBehavior.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameBehavior.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAIwDkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T12:56:39.433Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

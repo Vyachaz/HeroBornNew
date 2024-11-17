@@ -14,6 +14,9 @@ public class GameBehavior : MonoBehaviour, IManager
 
     public Stack<string> lootStack = new Stack<string>();
 
+    public delegate void DebugDelegate(string newText);
+    public DebugDelegate debug = Print;
+
     private int _itemsCollected = 0;
     private string _state;
 
@@ -113,6 +116,10 @@ public class GameBehavior : MonoBehaviour, IManager
     void Start()
     {
         Initialize();
+        InventoryList<string> inventoryList = new InventoryList<string>();
+
+        inventoryList.SetItem("Potion");
+        Debug.Log(inventoryList.item);
     }
 
     // Update is called once per frame
@@ -124,7 +131,12 @@ public class GameBehavior : MonoBehaviour, IManager
     {
         _state = "Manager initialaized...";
         _state.FancyDebug();
-        Debug.Log(_state);
+       //Debug.Log(_state);
+
+        debug(_state);
+        LogWithDelegate(debug);
+
+
 
         lootStack.Push("Sword of Doom");
         lootStack.Push("HP++");
@@ -154,5 +166,15 @@ public class GameBehavior : MonoBehaviour, IManager
             Debug.Log($" Last element of Stack = {lootStack.Peek()}");
 
         }
+    }
+
+    public static void Print(string newText)
+    {
+        Debug.Log(newText);
+    }
+
+    public void LogWithDelegate(DebugDelegate del)
+    {
+        del("Delegating the debug task...");
     }
 }
