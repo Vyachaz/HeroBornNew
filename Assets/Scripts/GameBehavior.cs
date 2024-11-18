@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using CustomExtensions;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
 public class GameBehavior : MonoBehaviour, IManager
 {
@@ -105,8 +105,23 @@ public class GameBehavior : MonoBehaviour, IManager
         { 
             if(GUI.Button(new Rect(Screen.width / 2 - 100, Screen.height / 2 - 50, 200, 100),"You lose..."))
             {
-                // RestartLevel();
-                Utilities.RestartLevel(0);
+                try
+                {
+                     // RestartLevel();
+                    // Utilities.RestartLevel(0);
+                     Utilities.RestartLevel(-1);
+                    debug("Level restarted sucessfully...");
+                }
+                catch(System.ArgumentException e)
+                {
+                    Utilities.RestartLevel(0);
+                    debug("Reverting to scene 0: " + e.ToString());
+                }
+                finally
+                {
+                    debug("Restart handled...");
+                }
+                
             }
         }
 
@@ -136,6 +151,9 @@ public class GameBehavior : MonoBehaviour, IManager
         debug(_state);
         LogWithDelegate(debug);
 
+        GameObject player = GameObject.Find("Player");
+        PlayerBehavior playerBehavior = player.GetComponent<PlayerBehavior>();
+        playerBehavior.playerJump += HandlePlayerJump;
 
 
         lootStack.Push("Sword of Doom");
@@ -176,5 +194,10 @@ public class GameBehavior : MonoBehaviour, IManager
     public void LogWithDelegate(DebugDelegate del)
     {
         del("Delegating the debug task...");
+    }
+
+    public void HandlePlayerJump()
+    {
+        debug("Player has jumped...");
     }
 }
